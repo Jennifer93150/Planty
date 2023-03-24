@@ -1,0 +1,60 @@
+/* PAGE ACCUEIL */
+
+/*bloc "l'energie des plantes"*/
+.bloc-text-energy-plant{
+    background-image: url(../assets/Rectangle-white-small.png), url(../assets/Rectangle-brown.png);
+    background-position: center bottom, center top;
+    background-repeat: no-repeat;
+    height: 425px;
+}
+
+/* bloc images fruit */
+.fruit-pictures-column{
+    margin: auto;
+    max-width: 816px !important;
+}
+
+.fruit-picture{
+    height: 100%;
+}
+
+/* titre images fruit */
+.image-picture-title{
+    margin: 0 !important;
+}
+
+/*titre image framboise*/
+.image-picture-title-raspberry{
+    padding: 0 39px;
+}
+
+/* texte image fruits */
+.image-picture-title strong{
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 800;
+}
+/* IMAGE BAS DE PAGE */
+.bottom-drinks{
+	background-color: white;
+}
+
+/* PAGE NOUS RENCONTRER */
+/*texte d'intro "nous rencontrer"*/
+.text-meet-us{
+    width: 60%;
+}
+
+/* Equipe */
+.bloc-team-meet-us{
+    background-color: white;
+    background-image: url(../assets/Rectangle-white-small.png);
+    height: 500px;
+}
+
+/****************
+PAGE COMMANDER
+**************/
+.page-id-54, .post-54{
+    background-color: #3B8E46 !important;
+}
