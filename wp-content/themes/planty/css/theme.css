@@ -1,60 +1,408 @@
-/* PAGE ACCUEIL */
-
-/*bloc "l'energie des plantes"*/
-.bloc-text-energy-plant{
-    background-image: url(../assets/Rectangle-white-small.png), url(../assets/Rectangle-brown.png);
-    background-position: center bottom, center top;
-    background-repeat: no-repeat;
-    height: 425px;
+/*********************************************************************
+                            GENERAL SETTINGS 
+**********************************************************************/
+:root{
+    /*colors*/
+    --beige : #ECE2DA;
+    --white : #ffffff;
+    --green : #3B8E46;
+    --dark-green : #326238;
+    --peach: #D2776A;
+    --pink: #E0B9B4;
+    --dark-pink : #DC9F96;
+    --red : #C02E44;
+    --black : #000000;
+    --radius-btn : 5px;
+    --radius-input : 7px;
 }
 
-/* bloc images fruit */
-.fruit-pictures-column{
+/*********************************************************************
+                            NAVBAR 
+**********************************************************************/
+header .site-header-focus-item{
+    padding-right: 0;
+}
+
+.text-to-side-logo{
+    color: var(--dark-green);
+    display: flex;
+    align-items: center;
+    font-family: 'Baskerville';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 10px;
+}
+
+.main-header-menu .menu-link, .main-header-menu>a {
+    padding: 0 2em;
+}
+
+.menu-link{
+    color: black;
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    justify-content: center;
+}
+
+.menu-link:hover{
+    text-decoration: none;
+}
+
+.menu-item-621{
+    background-color: var(--peach);
+    order: 3;
+    width: 236px;
+}
+
+.menu-item-621 a{
+    color: var(--white) !important;
+    font-weight: 700;
+} 
+
+.menu-item-621 a:hover{
+    background-color: var(--red) !important;
+}
+/*********************************************************************
+                            END NAVBAR 
+**********************************************************************/
+
+/*********************************************************************
+                            HOME PAGE 
+**********************************************************************/
+
+/******************************
+ Block "L'énergie des plantes"
+******************************/
+.background-white{
+    background-image: url(../assets/Rectangle_white_small\ copie.png), url(../assets/Rectangle_brown\ copie.png);
+    background-position: center 10px, center -10px;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+
+/******************************
+Block "Les goûts"
+******************************/
+.fruit-images-row{
     margin: auto;
     max-width: 816px !important;
 }
 
-.fruit-picture{
+.fruit-image{
     height: 100%;
+    object-fit: cover;
 }
 
-/* titre images fruit */
-.image-picture-title{
-    margin: 0 !important;
-}
-
-/*titre image framboise*/
-.image-picture-title-raspberry{
-    padding: 0 39px;
-}
-
-/* texte image fruits */
-.image-picture-title strong{
+.text-on-image{
     font-family: 'Syne';
     font-style: normal;
     font-weight: 800;
-}
-/* IMAGE BAS DE PAGE */
-.bottom-drinks{
-	background-color: white;
+    margin: 0 !important;
+    text-transform: uppercase;
 }
 
-/* PAGE NOUS RENCONTRER */
-/*texte d'intro "nous rencontrer"*/
+.text-on-image-raspberry{
+    padding: 0 40px;
+}
+
+.button-home{
+    height: 55px;
+    width: 198px !important;
+}
+
+.image-bottom-page{
+	background-color: white;
+}
+/*********************************************************************
+                        END HOME PAGE 
+**********************************************************************/
+/*******************************************************************
+                        GENERAL STYLE FORM
+********************************************************************/
+
+/******************************
+INPUT
+******************************/
+.wpcf7 input{
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.04);
+    height: 71px;
+   
+}
+.wpcf7 input, .wpcf7 textarea{
+    border-radius: var(--radius-input);
+}
+
+/******************************
+BUTTONS
+******************************/
+.wpcf7 input[type=submit]{
+    border-radius: var(--radius-btn);
+    color: white;
+    height: 55px;
+    margin: auto;
+}
+
+.wpcf7 input[type=submit]:hover, .form-btn-ok:hover{
+    background-color: var(--red);
+}
+
+/*********************************************************************
+                            PAGE NOUS RENCONTRER 
+**********************************************************************/
+
+/******************************
+BLOCK "Nous rencontrer"
+******************************/
 .text-meet-us{
     width: 60%;
 }
 
-/* Equipe */
+/******************************
+TEAM
+******************************/
 .bloc-team-meet-us{
-    background-color: white;
-    background-image: url(../assets/Rectangle-white-small.png);
+    background-image: url(../assets/Rectangle_white_small\ copie.png);
     height: 500px;
 }
 
-/****************
-PAGE COMMANDER
-**************/
-.page-id-54, .post-54{
-    background-color: #3B8E46 !important;
+/******************************
+FORM "nous contacter"
+******************************/
+#wpcf7-f310-p52-o1{
+    margin: auto;
+    text-align: start;
+    width: 383px;
 }
+
+/****************************** 
+INPUT
+******************************/
+#wpcf7-f310-p52-o1 input, #wpcf7-f310-p52-o1 textarea{
+    margin-top: 10px;
+}
+
+/****************************** 
+CENTER THE FORM BUTTON
+******************************/
+#wpcf7-f310-p52-o1 form p:last-child{
+    text-align: center;
+}
+/**************************************************************************
+                            END PAGE NOUS CONTACTER
+***************************************************************************/
+/**************************************************************************
+                            PAGE COMMANDER
+***************************************************************************/
+/******************************
+FORM SIZE 
+******************************/
+.block-form{
+    margin: auto !important;
+}
+
+/******************************
+BACKGROUND GREEN 
+******************************/
+.page-id-54, .post-54{
+    background-color: var(--green) !important; 
+}
+
+.form-title{
+    color: white !important;
+    text-align: start;
+}
+
+/******************************
+DRINK QUANTITY SELECTION BLOCK
+******************************/
+.form-choice-of-fruit{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form-fruit-quantity{
+    width: 23%;
+}
+
+.quantity{
+    border-radius: var(--radius-btn) !important;
+    height: 55px !important;
+    width: 95% !important; 
+}
+
+/******************************
+SHOW Input quantity arrow
+******************************/
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+    background-color: black;
+}
+
+.form-btn-ok{
+    width: 70%;
+    background-color: #E0B9B4 !important;
+    border-radius: var(--radius-btn) !important;
+    color: white !important;
+}
+
+.form-btn-ok:hover{
+    background: var(--red) !important;
+}
+
+/******************************
+HIDE LOADING
+******************************/
+.wpcf7-spinner {
+    display: none;
+}
+
+.form-horizontal-bar{
+    border: 1px solid var(--white);
+}
+
+.form-infos{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px; 
+}
+
+.infos{
+     width: 44% !important; 
+}
+
+.infos input{
+    margin: 13px 0;
+}
+
+.form-vertical-bar{
+    border: 1px solid var(--white);
+    height: 447px;
+}
+
+.form-button{
+    text-align: center;
+}
+
+/**************************************************************************
+                              FIN PAGE COMMANDER
+***************************************************************************/
+/**************************************************************************
+                              MEDIA QUERIES
+***************************************************************************/
+@media screen and (min-width: 922px){
+    /**************************************************************************
+                              NAVBAR
+    ***************************************************************************/
+    .menu-item-621{
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 922px){
+    /**************************************************************************
+                              NAVBAR
+    ***************************************************************************/
+    .text-to-side-logo{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px){
+    /**************************************************************************
+                              NAVBAR
+    ***************************************************************************/
+    .text-on-image{
+        font-size: 40px !important;
+    }
+    /**************************************************************************
+                              HOME
+    ***************************************************************************/
+    .form-fruit-quantity {
+        width: 48%;
+    }
+
+    /*********************************************************************
+                            PAGE NOUS RENCONTRER 
+    **********************************************************************/
+
+    /******************************
+    BLOCK "Nous rencontrer"
+    ******************************/
+    .text-meet-us{
+        width: 78%;
+    }
+
+    /**************************************************************************
+                              PAGE COMMANDER
+    ***************************************************************************/
+    .infos{
+        width: 100% !important; 
+    }
+
+    .form-vertical-bar{
+        height: 0;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 425px){
+    
+     /**************************************************************************
+                            PAGE NOUS RENCONTRER
+    ***************************************************************************/
+
+    /******************************
+    FORM SIZE
+    ******************************/
+    #wpcf7-f310-p52-o1{
+        width: 95%;
+    }
+
+    /******************************
+    BLOCK "Nous rencontrer"
+    ******************************/
+    .text-meet-us{
+        width: 78%;
+    }
+}
+
+@media screen and (max-width: 375px){
+    /**************************************************************************
+                              NAVBAR
+    ***************************************************************************/
+    .text-on-image{
+        font-size: 36px !important;
+    }
+
+    .text-on-image-raspberry{
+        padding: 0 30px;
+    }
+
+    /**************************************************************************
+                              PAGE COMMANDER
+    ***************************************************************************/
+    .form-btn-ok {
+        padding: 0 !important;
+        width: 50%;
+    }
+}
+
+
+@media screen and (max-width: 320px){
+    /**************************************************************************
+                              NAVBAR
+    ***************************************************************************/
+    .text-on-image{
+        font-size: 30px !important;
+    }
+}
+
+
