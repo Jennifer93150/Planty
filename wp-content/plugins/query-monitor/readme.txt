@@ -3,7 +3,7 @@ Contributors: johnbillion
 Tags: debug, debug-bar, development, performance, query monitor, rest-api
 Requires at least: 5.2
 Tested up to: 6.2
-Stable tag: 3.12.0
+Stable tag: 3.12.1
 License: GPLv2 or later
 Requires PHP: 7.2
 Donate link: https://github.com/sponsors/johnbillion
@@ -141,6 +141,13 @@ Yes. You can enable this on the Settings panel.
 In addition, if you like the plugin then I'd love for you to [leave a review](https://wordpress.org/support/view/plugin-reviews/query-monitor). Tell all your friends about it too!
 
 ## Changelog ##
+
+### 3.12.1 ###
+
+* Corrects some inter-panel links that point to the Queries panel and sub-panels
+* Switches to `sessionStorage` for the selected table column filters so they don't persist across tabs or sessions
+* Removes the "Debug Bar:" prefix on the menus for panels inherited from the Debug Bar plugin
+
 
 ### 3.12.0 ###
 
@@ -397,9 +404,3 @@ In addition, if you like the plugin then I'd love for you to [leave a review](ht
 * Push the close button a bit further away from the edge of the screen to avoid scrollbar interference on macOS.
 * Fix clash with object cache plugins that keep their hit and miss stats private.
 * Add missing asset position counters.
-
-### 3.3.3 ###
-
-* Add scripts and styles counts to admin menu items.
-* Group the cache logic together to avoid calling cache related functionality when it's not available. Fixes #418.
-* Switch to installing the test suite as Composer dependencies.

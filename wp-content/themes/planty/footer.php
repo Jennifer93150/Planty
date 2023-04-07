@@ -29,7 +29,7 @@ if (!defined('ABSPATH')) {
 							<nav class="site-navigation ast-flex-grow-1 navigation-accessibility footer-navigation" id="footer-site-navigation" aria-label="Navigation du site" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope">
 								<div class="footer-nav-wrap">
 									<?php
-									/**** Menu *****/
+									/**** Replaces the ul=>li part of the menu *****/
 									wp_nav_menu(
 										array(
 											'theme_location' => 'footer-menu',
@@ -40,9 +40,6 @@ if (!defined('ABSPATH')) {
 									);
 									/***************/
 									?>
-									<!-- <ul id="astra-footer-menu" class="ast-nav-menu ast-flex astra-footer-horizontal-menu astra-footer-tablet-vertical-menu astra-footer-mobile-vertical-menu">
-										<li id="menu-item-82" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-82"><a href="http://localhost:8888/planty/mentions-legales/" class="menu-link">Mentions Légales</a></li>
-									</ul> -->
 								</div>
 							</nav>
 						</div>

@@ -50,9 +50,9 @@ if (!defined('ABSPATH')) {
 			?>>
 		<header class="site-header header-main-layout-1 ast-primary-menu-enabled ast-hide-custom-menu-mobile ast-builder-menu-toggle-icon ast-mobile-header-inline" id="masthead" itemtype="https://schema.org/WPHeader" itemscope="itemscope" itemid="#masthead">
 			<div id="ast-desktop-header" data-toggle-type="dropdown">
-				<div class="ast-main-header-wrap main-header-bar-wrap ">
+				<div class="ast-main-header-wrap main-header-bar-wrap">
 					<div class="ast-primary-header-bar ast-primary-header main-header-bar site-header-focus-item" data-section="section-primary-header-builder">
-						<div class="site-primary-header-wrap ast-builder-grid-row-container site-header-focus-item ast-container" data-section="section-primary-header-builder">
+						<div id="navbar-fluid" class="site-primary-header-wrap ast-builder-grid-row-container site-header-focus-item ast-container" data-section="section-primary-header-builder">
 							<div class="ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center">
 								<div class="site-header-primary-section-left site-header-section ast-flex site-header-section-left">
 									<div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="title_tagline">
@@ -70,7 +70,7 @@ if (!defined('ABSPATH')) {
 												<nav class="site-navigation" id="primary-site-navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope" aria-label="Navigation du site">
 													<div id="ast-hf-menu-1" class="main-navigation ast-inline-flex">
 														<?php
-														/**** Menu *****/
+														/**** Replaces the ul=>li part of the menu *****/
 														wp_nav_menu(
 															array(
 																'theme_location' => 'main-menu',
@@ -82,15 +82,6 @@ if (!defined('ABSPATH')) {
 														/***************/
 														?>
 													</div>
-													<!-- 
-														<ul class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex  submenu-with-border stack-on-mobile">
-															<li class="page_item page-item-28 current-menu-item menu-item current-menu-item"><a href="http://localhost:8888/planty/" class="menu-link">Accueil</a></li>
-															<li class="page_item page-item-54 menu-item"><a href="http://localhost:8888/planty/commander/" class="menu-link">Commander</a></li>
-															<li class="page_item page-item-409 menu-item"><a href="http://localhost:8888/planty/home/" class="menu-link">Home</a></li>
-															<li class="page_item page-item-3 menu-item"><a href="http://localhost:8888/planty/mentions-legales/" class="menu-link">Mentions Légales</a></li>
-															<li class="page_item page-item-52 menu-item"><a href="http://localhost:8888/planty/nous-rencontrer/" class="menu-link">Nous rencontrer</a></li>
-														</ul>
-													 -->
 												</nav>
 											</div>
 										</div>
@@ -140,7 +131,7 @@ if (!defined('ABSPATH')) {
 								<nav class="site-navigation" id="ast-mobile-site-navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope" aria-label="Navigation du site">
 									<div id="ast-hf-mobile-menu" class="main-navigation">
 										<?php
-										/**** Menu *****/
+										/**** Replaces the ul=>li part of the menu *****/
 										wp_nav_menu(
 											array(
 												'theme_location' => 'main-menu',
@@ -151,13 +142,6 @@ if (!defined('ABSPATH')) {
 										);
 										/***************/
 										?>
-										<!-- <ul class="main-header-menu ast-nav-menu ast-flex  submenu-with-border astra-menu-animation-fade  stack-on-mobile">
-											<li class="page_item page-item-28 current-menu-item menu-item current-menu-item"><a href="http://localhost:8888/planty/" class="menu-link">Accueil</a></li>
-											<li class="page_item page-item-54 menu-item"><a href="http://localhost:8888/planty/commander/" class="menu-link">Commander</a></li>
-											<li class="page_item page-item-409 menu-item"><a href="http://localhost:8888/planty/home/" class="menu-link">Home</a></li>
-											<li class="page_item page-item-3 menu-item"><a href="http://localhost:8888/planty/mentions-legales/" class="menu-link">Mentions Légales</a></li>
-											<li class="page_item page-item-52 menu-item"><a href="http://localhost:8888/planty/nous-rencontrer/" class="menu-link">Nous rencontrer</a></li>
-										</ul> -->
 									</div>
 								</nav>
 							</div>

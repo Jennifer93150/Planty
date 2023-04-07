@@ -48,10 +48,18 @@ add_filter( 'wp_nav_menu_items', 'add_extra_item_to_nav_menu', 10, 2);
 function add_extra_item_to_nav_menu( $items, $args ) {
 	
 	if (is_user_logged_in() && $args->theme_location == 'main-menu' ) {
-		$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page order-2"><a class="menu-link" href="http://localhost:8888/planty/wp-admin/">Admin</a></li>';
+		$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page order-link"><a class="menu-link" href="http://localhost:8888/planty/wp-admin/">Admin</a></li>';
 	}
 	return $items;
 }
+
+/* Ajout d'une classe sur a du menu */
+//function montheme_menu_link_class($attrs)
+//{
+//  $attrs['class'] = 'menu-link-commander';
+// return $attrs;
+//}
+//add_filter('nav_menu_link_attributes', 'montheme_menu_link_class');
 
 /* Ajout d'une classe sur li du menu */
 //function montheme_menu_class($classes)
@@ -59,11 +67,4 @@ function add_extra_item_to_nav_menu( $items, $args ) {
 //   $classes[] = 'page_item menu-item';
 //   return $classes;
 //}
-/* Ajout d'une classe sur a du menu */
-//function montheme_menu_link_class($attrs)
-//{
-//   $attrs['class'] = 'menu-link';
-//   return $attrs;
-//}
 //add_filter('nav_menu_css_class', 'montheme_menu_class');
-//add_filter('nav_menu_link_attributes', 'montheme_menu_link_class');

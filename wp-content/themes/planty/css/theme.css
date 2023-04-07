@@ -1,29 +1,69 @@
 /*********************************************************************
                             GENERAL SETTINGS 
 **********************************************************************/
-:root{
+:root {
     /*colors*/
-    --beige : #ECE2DA;
-    --white : #ffffff;
-    --green : #3B8E46;
-    --dark-green : #326238;
+    --beige: #ECE2DA;
+    --white: #ffffff;
+    --green: #3B8E46;
+    --dark-green: #326238;
     --peach: #D2776A;
     --pink: #E0B9B4;
-    --dark-pink : #DC9F96;
-    --red : #C02E44;
-    --black : #000000;
-    --radius-btn : 5px;
-    --radius-input : 7px;
+    --dark-pink: #DC9F96;
+    --red: #C02E44;
+    --black: #000000;
+    --radius-btn: 5px;
+    --radius-input: 7px;
+}
+
+/*******************************************************************
+                        GENERAL STYLE FORM
+********************************************************************/
+
+/******************************
+INPUT
+******************************/
+.wpcf7 input {
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.04);
+    height: 71px;
+}
+
+.wpcf7 input,
+.wpcf7 textarea {
+    border-radius: var(--radius-input);
+}
+
+.entry-content p {
+    margin-bottom: 1em;
+}
+
+/******************************
+BUTTONS
+******************************/
+.wpcf7 input[type=submit] {
+    border-radius: var(--radius-btn);
+    color: white;
+    height: 56px;
+    margin: auto;
+}
+
+.wpcf7 input[type=submit]:hover,
+.button-quantity:hover {
+    background-color: var(--red);
 }
 
 /*********************************************************************
                             NAVBAR 
 **********************************************************************/
-header .site-header-focus-item{
+header .site-header-focus-item {
     padding-right: 0;
 }
 
-.text-to-side-logo{
+.ast-container {
+    max-width: none;
+}
+
+.text-to-side-logo {
     color: var(--dark-green);
     display: flex;
     align-items: center;
@@ -35,11 +75,12 @@ header .site-header-focus-item{
     margin: 0 10px;
 }
 
-.main-header-menu .menu-link, .main-header-menu>a {
+.main-header-menu .menu-link,
+.main-header-menu>a {
     padding: 0 2em;
 }
 
-.menu-link{
+.menu-link {
     color: black;
     font-family: 'Syne';
     font-style: normal;
@@ -49,24 +90,35 @@ header .site-header-focus-item{
     justify-content: center;
 }
 
-.menu-link:hover{
+.menu-link:hover {
     text-decoration: none;
 }
 
-.menu-item-621{
-    background-color: var(--peach);
-    order: 3;
-    width: 236px;
+/******************************
+Reverse links
+******************************/
+.order-link{
+    order: 2;
 }
 
-.menu-item-621 a{
+.menu-item-621 {
+    order: 3;
+}
+
+/******************************
+ Link "Commander"
+******************************/
+.menu-item-621 .menu-link {
+    background-color: var(--peach) !important;
     color: var(--white) !important;
     font-weight: 700;
-} 
+    width: 236px !important;
+}
 
-.menu-item-621 a:hover{
+.menu-item-621 .menu-link:hover {
     background-color: var(--red) !important;
 }
+
 /*********************************************************************
                             END NAVBAR 
 **********************************************************************/
@@ -78,27 +130,27 @@ header .site-header-focus-item{
 /******************************
  Block "L'énergie des plantes"
 ******************************/
-.background-white{
+.background-white-and-brown {
     background-image: url(../assets/Rectangle_white_small\ copie.png), url(../assets/Rectangle_brown\ copie.png);
     background-position: center 10px, center -10px;
-    background-repeat: no-repeat; 
-    background-size: cover; 
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /******************************
 Block "Les goûts"
 ******************************/
-.fruit-images-row{
+.fruit-images-row {
     margin: auto;
     max-width: 816px !important;
 }
 
-.fruit-image{
+.fruit-image {
     height: 100%;
     object-fit: cover;
 }
 
-.text-on-image{
+.text-on-image {
     font-family: 'Syne';
     font-style: normal;
     font-weight: 800;
@@ -106,50 +158,22 @@ Block "Les goûts"
     text-transform: uppercase;
 }
 
-.text-on-image-raspberry{
+.text-on-image-raspberry {
     padding: 0 40px;
 }
 
-.button-home{
+.button-home {
     height: 55px;
     width: 198px !important;
 }
 
-.image-bottom-page{
-	background-color: white;
+.image-bottom-page {
+    background-color: white;
 }
+
 /*********************************************************************
                         END HOME PAGE 
 **********************************************************************/
-/*******************************************************************
-                        GENERAL STYLE FORM
-********************************************************************/
-
-/******************************
-INPUT
-******************************/
-.wpcf7 input{
-    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.04);
-    height: 71px;
-   
-}
-.wpcf7 input, .wpcf7 textarea{
-    border-radius: var(--radius-input);
-}
-
-/******************************
-BUTTONS
-******************************/
-.wpcf7 input[type=submit]{
-    border-radius: var(--radius-btn);
-    color: white;
-    height: 55px;
-    margin: auto;
-}
-
-.wpcf7 input[type=submit]:hover, .form-btn-ok:hover{
-    background-color: var(--red);
-}
 
 /*********************************************************************
                             PAGE NOUS RENCONTRER 
@@ -158,22 +182,14 @@ BUTTONS
 /******************************
 BLOCK "Nous rencontrer"
 ******************************/
-.text-meet-us{
+.text-meet-us {
     width: 60%;
-}
-
-/******************************
-TEAM
-******************************/
-.bloc-team-meet-us{
-    background-image: url(../assets/Rectangle_white_small\ copie.png);
-    height: 500px;
 }
 
 /******************************
 FORM "nous contacter"
 ******************************/
-#wpcf7-f310-p52-o1{
+#wpcf7-f310-p52-o1 {
     margin: auto;
     text-align: start;
     width: 383px;
@@ -182,18 +198,20 @@ FORM "nous contacter"
 /****************************** 
 INPUT
 ******************************/
-#wpcf7-f310-p52-o1 input, #wpcf7-f310-p52-o1 textarea{
+#wpcf7-f310-p52-o1 input,
+#wpcf7-f310-p52-o1 textarea {
     margin-top: 10px;
 }
 
 /****************************** 
 CENTER THE FORM BUTTON
 ******************************/
-#wpcf7-f310-p52-o1 form p:last-child{
+#wpcf7-f310-p52-o1 form p:last-child {
     text-align: center;
 }
+
 /**************************************************************************
-                            END PAGE NOUS CONTACTER
+                            END PAGE NOUS RENCONTRER
 ***************************************************************************/
 /**************************************************************************
                             PAGE COMMANDER
@@ -201,59 +219,117 @@ CENTER THE FORM BUTTON
 /******************************
 FORM SIZE 
 ******************************/
-.block-form{
+.block-form {
     margin: auto !important;
 }
 
 /******************************
 BACKGROUND GREEN 
 ******************************/
-.page-id-54, .post-54{
-    background-color: var(--green) !important; 
+.page-id-54,
+.post-54 {
+    background-color: var(--green) !important;
 }
+/*****************************/
 
-.form-title{
+.form-title {
     color: white !important;
     text-align: start;
 }
 
 /******************************
-DRINK QUANTITY SELECTION BLOCK
+BLOCK QUANTITY FRUIT DRINK
 ******************************/
-.form-choice-of-fruit{
+.block-choice-of-fruit {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.form-fruit-quantity{
+.block-fruit-quantity {
     width: 23%;
 }
 
-.quantity{
+.form-quantity {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-quantity>p {
+    width: 42%;
+}
+
+.quantity {
     border-radius: var(--radius-btn) !important;
-    height: 55px !important;
-    width: 95% !important; 
+    font-size: 14pt;
+    height: 56px !important;
+    margin: 0 5px 0 0 !important;
+    padding: 0px;
+    z-index: 1;
+}
+
+.button-quantity{
+    background-color: #E0B9B4 !important;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    padding: 0 !important;
+    width: 53%;
+}
+
+.button-quantity:hover {
+    background: var(--red) !important;
+}
+
+.button-quantity p {
+    margin: 0;
+    text-align: center;
 }
 
 /******************************
-SHOW Input quantity arrow
+ BUTTON INC/DEC
 ******************************/
-input[type=number]::-webkit-inner-spin-button {
-    opacity: 1;
-    background-color: black;
+
+.block-inc-dec {
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 27%;
+    top: 0px;
+    cursor: default;
+    z-index: 2;
+    background-color: var(--dark-pink);
+    width: 15%;
+    text-align: center;
+    margin: 0px;
+    pointer-events: none;
+    height: 56px;
 }
 
-.form-btn-ok{
-    width: 70%;
-    background-color: #E0B9B4 !important;
-    border-radius: var(--radius-btn) !important;
-    color: white !important;
+#inc-button, #dec-button{
+    height: 30%;
 }
 
-.form-btn-ok:hover{
-    background: var(--red) !important;
+#inc-button {
+    color: white;
+    cursor: pointer;
 }
+
+#dec-button {
+    color: white;
+    cursor: pointer;
+}
+
+#spinner-bar{
+   margin: 12px 0 0;
+}
+
+/*****************************/
 
 /******************************
 HIDE LOADING
@@ -262,31 +338,31 @@ HIDE LOADING
     display: none;
 }
 
-.form-horizontal-bar{
+.form-horizontal-bar {
     border: 1px solid var(--white);
 }
 
-.form-infos{
+.block-infos {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 50px; 
+    margin-top: 50px;
 }
 
-.infos{
-     width: 44% !important; 
+.infos {
+    width: 44% !important;
 }
 
-.infos input{
+.infos input {
     margin: 13px 0;
 }
 
-.form-vertical-bar{
+.form-vertical-bar {
     border: 1px solid var(--white);
     height: 447px;
 }
 
-.form-button{
+.form-button-submit {
     text-align: center;
 }
 
@@ -296,36 +372,35 @@ HIDE LOADING
 /**************************************************************************
                               MEDIA QUERIES
 ***************************************************************************/
-@media screen and (min-width: 922px){
+@media (min-width: 922px) {
     /**************************************************************************
                               NAVBAR
     ***************************************************************************/
-    .menu-item-621{
+    .menu-item-621 {
         height: 80px;
     }
 }
 
-@media screen and (max-width: 922px){
+@media screen and (max-width: 922px) {
     /**************************************************************************
                               NAVBAR
     ***************************************************************************/
-    .text-to-side-logo{
+    .text-to-side-logo {
         display: none;
+    }
+
+    .menu-item-621 .menu-link {
+        width: 100% !important;
     }
 }
 
-@media screen and (max-width: 768px){
-    /**************************************************************************
-                              NAVBAR
-    ***************************************************************************/
-    .text-on-image{
-        font-size: 40px !important;
-    }
+@media screen and (max-width: 768px) {
+
     /**************************************************************************
                               HOME
     ***************************************************************************/
-    .form-fruit-quantity {
-        width: 48%;
+    .text-on-image {
+        font-size: 40px !important;
     }
 
     /*********************************************************************
@@ -335,74 +410,116 @@ HIDE LOADING
     /******************************
     BLOCK "Nous rencontrer"
     ******************************/
-    .text-meet-us{
+    .text-meet-us {
         width: 78%;
     }
 
     /**************************************************************************
                               PAGE COMMANDER
     ***************************************************************************/
-    .infos{
-        width: 100% !important; 
+    /******************************
+    BLOCK QUANTITY FRUIT DRINK
+    ******************************/
+    .block-fruit-quantity {
+        width: 48%;
     }
 
-    .form-vertical-bar{
+    .form-quantity{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-quantity>p {
+        width: 100%;
+    }
+
+    .quantity{
+        height: 30px;
+    }
+
+    .block-inc-dec {
+        left: 88%;
+        width: 12%;
+    }
+
+    .button-quantity{
+        height: 40px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    /******************************/
+    .infos {
+        width: 100% !important;
+    }
+
+    .form-vertical-bar {
         height: 0;
         margin-bottom: 20px;
         width: 100%;
     }
 }
 
-@media screen and (max-width: 425px){
-    
-     /**************************************************************************
+@media screen and (max-width: 425px) {
+
+    /**************************************************************************
                             PAGE NOUS RENCONTRER
     ***************************************************************************/
-
     /******************************
     FORM SIZE
     ******************************/
-    #wpcf7-f310-p52-o1{
+    #wpcf7-f310-p52-o1 {
         width: 95%;
     }
 
     /******************************
     BLOCK "Nous rencontrer"
     ******************************/
-    .text-meet-us{
+    .text-meet-us {
         width: 78%;
+    }
+
+    /**************************************************************************
+                            PAGE COMMANDER
+    ***************************************************************************/
+    .block-inc-dec {
+        left: 80%;
+        width: 20%;
     }
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 375px) {
+
     /**************************************************************************
                               NAVBAR
     ***************************************************************************/
-    .text-on-image{
+    .text-on-image {
         font-size: 36px !important;
     }
 
-    .text-on-image-raspberry{
+    .text-on-image-raspberry {
         padding: 0 30px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    /**************************************************************************
+                              NAVBAR
+    ***************************************************************************/
+    .text-on-image {
+        font-size: 30px !important;
     }
 
     /**************************************************************************
                               PAGE COMMANDER
     ***************************************************************************/
-    .form-btn-ok {
-        padding: 0 !important;
-        width: 50%;
+    .quantity {
+        margin: 0 !important;
     }
 }
 
-
-@media screen and (max-width: 320px){
-    /**************************************************************************
-                              NAVBAR
-    ***************************************************************************/
-    .text-on-image{
-        font-size: 30px !important;
-    }
-}
-
-
+/* input[type="number"]::-webkit-inner-spin-button {
+    z-index: 10;
+    opacity: 1;
+} */
